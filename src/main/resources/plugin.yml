@@ -2,5 +2,5 @@ name: ${project.name}
 main: de.JeterLP.ChatManager.ChatEX
 version: ${project.version}
 author: [TheJeterLP, MichelDeStar]
-description: Chat management plugin
-softdepend: [PermissionsEx,Vault,bPermissions]
+description: ChatManagement plugin optimized for Hollandcraft
+softdepend: [PermissionsEx, Vault, Factions]

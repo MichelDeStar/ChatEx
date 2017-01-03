@@ -4,9 +4,9 @@
     <groupId>de.JeterLP</groupId>
     <artifactId>ChatEx</artifactId>
     <name>ChatEx</name>
-    <inceptionYear>2015</inceptionYear>
-    <version>1.5.1</version>
-    <description>ChatManagement plugin for Bukkit</description>  
+    <inceptionYear>2016</inceptionYear>
+    <version>1.5.1-HC</version>
+    <description>ChatManagement plugin for Spigot optimized for Hollandcraft</description>  
     
     <distributionManagement>
         <repository>
