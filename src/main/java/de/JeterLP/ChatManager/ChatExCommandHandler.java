@@ -31,7 +31,7 @@ public class ChatExCommandHandler {
     public CommandResult executeConsole(CommandSender sender, CommandArgs args) {
         if (helpPage.sendHelp(sender, args)) return CommandResult.SUCCESS;
         if (!args.isEmpty()) return CommandResult.ERROR;
-        sender.sendMessage("§aChatEx plugin by " + Joiner.on(", ").join(ChatEX.getInstance().getDescription().getAuthors()));
+        sender.sendMessage("§aChatEx plugin by " + Joiner.on(", ").join(ChatEX.getInstance().getDescription().getAuthors()) + " optimized for Hollandcraft");
         return CommandResult.SUCCESS;
     }
 
