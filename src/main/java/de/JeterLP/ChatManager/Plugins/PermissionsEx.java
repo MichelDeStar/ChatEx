@@ -22,21 +22,19 @@ public class PermissionsEx implements PermissionsPlugin {
             finalPrefix = personalPrefix;
         }
         PermissionGroup[] userGroups = user.getGroups();
-        String donatorRank = "";
         String mineRank = "";
-        int i = 0;
+        String donatorRank = "";
         for (PermissionGroup group : userGroups) {
             String groupPrefix = group.getPrefix();
             if (groupPrefix != null && !groupPrefix.isEmpty()) {
-                if (i == 0) {
-                    donatorRank += groupPrefix;
-                    i++;
-                } else {
+                if (group.getIdentifier().length() == 1) {
                     mineRank += groupPrefix;
+                } else {
+                    donatorRank += groupPrefix;
                 }
             }
         }
-        return donatorRank + " " + mineRank;
+        return mineRank + donatorRank;
     }
 
     @Override
