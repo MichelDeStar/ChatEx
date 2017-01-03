@@ -22,18 +22,21 @@ public class PermissionsEx implements PermissionsPlugin {
             finalPrefix = personalPrefix;
         }
         PermissionGroup[] userGroups = user.getGroups();
+        String donatorRank = "";
+        String mineRank = "";
         int i = 0;
         for (PermissionGroup group : userGroups) {
             String groupPrefix = group.getPrefix();
             if (groupPrefix != null && !groupPrefix.isEmpty()) {
-            	if(i > 0) {
-            		finalPrefix += ' ';
-            	}
-                finalPrefix += groupPrefix;
-                i ++;
+                if (i == 0) {
+                    donatorRank += groupPrefix;
+                    i++;
+                } else {
+                    mineRank += groupPrefix;
+                }
             }
         }
-        return finalPrefix;
+        return donatorRank + " " + mineRank;
     }
 
     @Override
@@ -49,18 +52,18 @@ public class PermissionsEx implements PermissionsPlugin {
         String finalSuffix = "";
         if (personalSuffix != null && !personalSuffix.isEmpty()) {
             finalSuffix = personalSuffix;
-           
+
         }
-        
+
         PermissionGroup[] userGroups = user.getGroups();
         int i = 0;
         for (PermissionGroup group : userGroups) {
             String groupSuffix = group.getSuffix();
             if (groupSuffix != null && !groupSuffix.isEmpty()) {
-            	 if(i > 0) {
-                 	finalSuffix += ' ';
-                 }
-                 i ++;
+                if (i > 0) {
+                    finalSuffix += ' ';
+                }
+                i++;
                 finalSuffix += groupSuffix;
             }
         }
