@@ -1,3 +1,3 @@
 ChatEx
 ================================
-Recode of the original ChatManager from PermissionsEx, which is no longer supported.
+Recode of the original ChatEx to fulfill the needs for Prison
